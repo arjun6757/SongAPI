@@ -62,7 +62,7 @@ const songs = [
                 year: 2017
             }
         ],
-        image: "https://pics.filmaffinity.com/maroon_5_sza_what_lovers_do-440693219-large.jpg",
+        image: "https://i.scdn.co/image/ab67616d0000b2733c5e0b163d55ef4e27f60689",
         yt: "https://www.youtube.com/watch?v=5Wiio4KoGe8"
     },
 

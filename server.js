@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-// allowing request from localhost:5000 by cors middleware
+// allowing request from specific url by cors middleware
 const allowedOrigin = process.env.ALLOWED_ORIGIN;
 
 const corsOptions = {
@@ -150,41 +150,3 @@ process.on('SIGTERM', () => {
         process.exit(0);
     });
 }); //this will work when i kill it via terminal
-
-//old data before using database ofc
-// const songs = [
-//     {
-//         name: "Fall",
-//         artist: ["Eminem"],
-//         image: "https://media.pitchfork.com/photos/64f0da7d7905eccfe3dba569/1:1/w_320,c_limit/Eminem-Kamikaze.jpg",
-//         yt: "https://www.youtube.com/watch?v=jsur8561_1A"
-//     },
-
-//     {
-//         name: "Sober",
-//         artist: ["G-Eazy", "Charlie Puth"],
-//         image: "https://www.billboard.com/wp-content/uploads/media/g-eazy-sober-vid-2018-billboard-1548.jpg",
-//         yt: "https://www.youtube.com/watch?v=8OARiNiJ_w8&rco=1"
-//     },
-
-//     {
-//         name: "What Lovers Do",
-//         artist: ["Maroon 5", "SZA"],
-//         image: "https://i.scdn.co/image/ab67616d0000b2733c5e0b163d55ef4e27f60689",
-//         yt: "https://www.youtube.com/watch?v=5Wiio4KoGe8"
-//     },
-
-//     {
-//         name: "Locked Away",
-//         artist: ["R. City", "Adam Levine"],
-//         image: "https://i.scdn.co/image/ab67616d0000b2739519b1a9e2b552407e65b01a",
-//         yt: "https://www.youtube.com/watch?v=6GUm5g8SG4o"
-//     },
-
-//     {
-//         name: "Closer",
-//         artist: ["The Chainsmokers", "Halsey"],
-//         image: "https://i1.sndcdn.com/artworks-000179073287-3ur3or-t500x500.jpg",
-//         yt: "https://www.youtube.com/watch?v=PT2_F-1esPk"
-//     }
-// ]

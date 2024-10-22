@@ -13,10 +13,11 @@ const allowedOrigin = process.env.ALLOWED_ORIGIN;
 
 const corsOptions = {
     origin: (origin, callback) => {
+        console.log(`Origin: ${origin}, Allowed: ${allowedOrigin}`);
         if(origin === allowedOrigin || !origin) {
             callback(null, true);
         } else {
-            callback(new Error("Not allowed by CORS"));
+            callback(new Error(`CORS policy error: Origin ${origin} is not allowed.`));
         }
     },
     methods: ['GET', 'POST', 'PUT', 'DELETE'], //can list all allowed methods here
